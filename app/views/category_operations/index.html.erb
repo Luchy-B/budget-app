@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Category operations</h1>
+
+<div id="category_operations">
+  <% @category_operations.each do |category_operation| %>
+    <%= render category_operation %>
+    <p>
+      <%= link_to "Show this category operation", category_operation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New category operation", new_category_operation_path %>
