@@ -2,7 +2,7 @@
 <div class="login-nav">
       <div><%= link_to "Home", categories_path, class: "rails-link" %> </div>
       <div class="fs-5">TRANSACTION</div>  
-      <div class="">SEARCH</div>      
+      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete %></div>    
   </div>
 
 

@@ -1,4 +1,5 @@
 @import 'bootstrap';
+
 *,
 html,
 a,
@@ -7,23 +8,26 @@ body {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-
 }
 
 .rails-link {
-    color: #fff;
+  color: #fff;
 }
 
-a{ 
+.rails-link a{
+  color: #fff;
+}
+
+a {
   color: #434b54;
-  }
+}
 
 body {
-   
-    background-color: rgb(185, 185, 185);
-  }
+  background-color: rgb(185, 185, 185);
+}
+
 main {
-    width: 100%;
+  width: 100%;
 }
 
 .welcome h1 {
@@ -33,27 +37,21 @@ main {
 .logins {
   padding-top: 20%;
   width: 100%;
-
 }
 
-.logins a{ 
-    width: 100%;
-
+.logins a {
+  width: 100%;
   font-weight: 600;
-  }
+}
 
 // Login
 
-.login-page {
-  
-}
-
 .login-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  // align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   background-color: #3778c2;
   color: #fff;
   padding: 10px;
@@ -67,16 +65,16 @@ main {
 .login-fields {
   display: flex;
   flex-direction: column;
-//   align-items: center;
+  //   align-items: center;
   margin-top: 15px;
 }
 
-.email-width, 
+.email-width,
 .password-width {
   width: 100%;
   padding: 20px;
   border: none;
-//   border-bottom: 2px solid black;
+  //   border-bottom: 2px solid black;
 }
 
 .forgot-pwd {
@@ -85,8 +83,7 @@ main {
 
 hr {
   width: 100%;
-
-  margin: 0px;
+  margin: 0;
   margin-left: 20px;
   background-color: #434b54;
   border: 2px solid #434b54;
@@ -96,19 +93,15 @@ hr {
   background-color: #fff;
 }
 
-#categories {
-  
-}
-
 .category-header {
   display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    align-items: center;
+  flex-direction: row;
+  // align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
   padding: 10px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
 }
 
 .category {
@@ -120,7 +113,7 @@ hr {
   margin: 10px;
   background-color: #fff;
   border-radius: 3px;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
 }
 
 .category-content {
@@ -153,24 +146,20 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
-    .welcome h1 {
-        padding-top: 20%;
-      }
-      
-      
-      .logins {
-        padding-top: 40%;
-        width: 100%;
-      
-      }
-      
-    .logins a{
-        padding-top: 20%;
-        width: 100%;
-      font-weight: 600;
-      }
+  .welcome h1 {
+    padding-top: 20%;
+  }
 
-// Login Page
+  .logins {
+    padding-top: 40%;
+    width: 100%;
+  }
 
+  .logins a {
+    padding-top: 20%;
+    width: 100%;
+    font-weight: 600;
+  }
 
+  // Login Page
 }

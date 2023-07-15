@@ -1,12 +1,9 @@
 <p style="color: green"><%= notice %></p>
-<div
-<p><%= button_to "Log-out", destroy_user_session_path, method: :delete %></p>
-</div>
 <div >
   <div class="login-nav">
       <div><%= link_to "Back", users_path, class: "rails-link" %> </div>
       <div>Category</div>  
-      <div class="">SEARCH</div>           
+      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete %></div>          
   </div>
 
   <% if @categories.empty? %>
