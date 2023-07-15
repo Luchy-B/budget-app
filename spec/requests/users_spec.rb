@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /users" do
-    it "renders the index template" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /users' do
+    it 'renders the index template' do
       get '/users/'
       expect(response).to have_http_status(:ok)
       expect(response.body).to include('Dazzle')
@@ -18,5 +18,4 @@ RSpec.describe "Users", type: :request do
       expect(response).to have_http_status(200)
     end
   end
-
 end

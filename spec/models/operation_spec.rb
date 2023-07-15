@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Operation, type: :model do
   let(:user) { User.create(name: 'Test User', email: 'test@example.com', password: 'password') }
-  let(:category) { Category.create(name: 'Test Category', icon: fixture_file_upload('img-4.png', 'image/png'), author: user) }
+  let(:category) do
+    Category.create(name: 'Test Category', icon: fixture_file_upload('img-4.png', 'image/png'), author: user)
+  end
 
   it 'requires a name' do
     operation = Operation.new(amount: 50, author: user, category_id: category.id)

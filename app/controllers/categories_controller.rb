@@ -48,7 +48,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # DELETE /categories/1 or /categories/1.json
   def destroy
     @category.destroy
 
@@ -64,11 +63,6 @@ class CategoriesController < ApplicationController
   def set_category
     @category = Category.find(params[:id])
   end
-
-  # Only allow a list of trusted parameters through.
-  # def set_category
-  #   @category = @user.categories.find(params[:id])
-  # end
 
   def category_params
     params.require(:category).permit(:name, :icon)
