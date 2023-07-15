@@ -46,10 +46,6 @@
     <li><a href="https://postgresql.org">PostgreSQL</a></li>
   </ul></details>
 
-# Live Preview
-> You can preview the project by visiting the link below
-
-[Link Preview](https://)
 # Description
 
 > You can watch a demo of the video description below.
