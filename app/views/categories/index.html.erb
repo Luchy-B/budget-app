@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+<div
+<p><%= button_to "Log-out", destroy_user_session_path, method: :delete %></p>
+</div>
+<div >
+  <div class="login-nav">
+      <div><%= link_to "Back", users_path, class: "rails-link" %> </div>
+      <div>Category</div>  
+      <div class="">SEARCH</div>           
+  </div>
+
+  <% if @categories.empty? %>
+    <h2>There are no categories available</h2>
+  <% end %>
+  <% @categories.each do |category| %>
+    <%= link_to category_operations_path(category_id: category.id) do %>
+    <div class="category">
+
+      <div class="photo">
+        <% if category.icon.attached? %>
+          <%= image_tag category.icon, class: "profile_img" %>
+        <% end %>
+      </div>
+
+      <div>
+        <p><%= category.name %></p>
+        <p class="fs"><%= category.created_at.strftime("%d %b %Y") %></p>
+      </div>
+
+      <p><strong><%= category.operations.sum(:amount) %>$ </strong></p>
+
+    </div>
+      <% end %>
+  <% end %>
+  
+</div>
+
+
+<div>
+<p class="forgot-pwd"><%= link_to "Add New category", new_category_path(@user) %></p>
+</div>
+

@@ -1,0 +1,176 @@
+@import 'bootstrap';
+*,
+html,
+a,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
+}
+
+.rails-link {
+    color: #fff;
+}
+
+a{ 
+  color: #434b54;
+  }
+
+body {
+   
+    background-color: rgb(185, 185, 185);
+  }
+main {
+    width: 100%;
+}
+
+.welcome h1 {
+  padding-top: 20%;
+}
+
+.logins {
+  padding-top: 20%;
+  width: 100%;
+
+}
+
+.logins a{ 
+    width: 100%;
+
+  font-weight: 600;
+  }
+
+// Login
+
+.login-page {
+  
+}
+
+.login-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+  background-color: #3778c2;
+  color: #fff;
+  padding: 10px;
+}
+
+.btn-login {
+  background-color: transparent;
+  border: none;
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+//   align-items: center;
+  margin-top: 15px;
+}
+
+.email-width, 
+.password-width {
+  width: 100%;
+  padding: 20px;
+  border: none;
+//   border-bottom: 2px solid black;
+}
+
+.forgot-pwd {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+
+  margin: 0px;
+  margin-left: 20px;
+  background-color: #434b54;
+  border: 2px solid #434b54;
+}
+
+.login-field {
+  background-color: #fff;
+}
+
+#categories {
+  
+}
+
+.category-header {
+  display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.category-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fs {
+  font-size: 10px;
+}
+
+.transaction-page {
+  background-color: red;
+}
+
+.profile_img {
+  max-width: 100%;
+}
+
+.photo {
+  width: 70px;
+  border-radius: 4px;
+  display: grid;
+  // height: 50px;
+  // border-radius: 4px;
+  // display: grid;
+  // place-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome h1 {
+        padding-top: 20%;
+      }
+      
+      
+      .logins {
+        padding-top: 40%;
+        width: 100%;
+      
+      }
+      
+    .logins a{
+        padding-top: 20%;
+        width: 100%;
+      font-weight: 600;
+      }
+
+// Login Page
+
+
+}
