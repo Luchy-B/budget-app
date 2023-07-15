@@ -1,14 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<main class="welcome">
+  <p style="color: green"><%= notice %></p>
+  <div class="container">
+    
+    <div class=" container-fluid d-flex flex-column justify-content-center align-items-center">
+    <h1>Dazzle</h1>
+<div class="content d-flex flex-column text-center logins">
+        <p class="btn btn-primary"><%= link_to "Sign-Up", new_user_registration_path %></p>
 
-<h1>Dazzle</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+        <p><%= link_to "Log-in", new_user_session_path %></p>
 </div>
-
-<%= link_to "New user", new_user_path %>
+    </div>
+  </div>
+</main>

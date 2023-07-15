@@ -3,7 +3,8 @@ class OperationsController < ApplicationController
 
   # GET /operations or /operations.json
   def index
-    @operations = Operation.all
+    @category = Category.find(params[:category_id])
+    @operations = @category.operations
   end
 
   # GET /operations/1 or /operations/1.json
@@ -21,11 +22,13 @@ class OperationsController < ApplicationController
 
   # POST /operations or /operations.json
   def create
-    @operation = Operation.new(operation_params)
+    @category = Category.find(params[:category_id])
+    @operation = @category.operations.build(operation_params)
+    @operation.author = current_user
 
     respond_to do |format|
       if @operation.save
-        format.html { redirect_to operation_url(@operation), notice: "Operation was successfully created." }
+        format.html { redirect_to category_operations_path, notice: "Operation was successfully created." }
         format.json { render :show, status: :created, location: @operation }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +68,6 @@ class OperationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def operation_params
-      params.fetch(:operation, {})
+      params.require(:operation).permit(:name, :amount)
     end
 end

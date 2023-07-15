@@ -1,14 +1,46 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Operations</h1>
+<div class="login-nav">
+      <div><%= link_to "Home", categories_path, class: "rails-link" %> </div>
+      <div class="fs-5">TRANSACTION</div>  
+      <div class="">SEARCH</div>      
+  </div>
 
-<div id="operations">
-  <% @operations.each do |operation| %>
-    <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+
+<div>
+  <div class="category-header">
+    <h6><%= @category.name %></h6>
+    <p><strong><%= @operations.sum(:amount) %>$ </strong></p>
+  </div>
+
+  
+
+<% if @operations.nil? %>
+ <p>No transaction available</p>
+ <% else %>
+ <% @operations.each do |operation| %>
+ <div class = "category" >
+   <div class = "category-content">
+
+   <div class="photo">
+   <% if @category.icon.attached? %>
+     <%= image_tag @category.icon, class: "profile_img" %>
+   <% end %>
+ </div>
+
+    <div>
+      <p><%= operation.name %></p>
+      <p class="fs"><%= operation.created_at.strftime("%d %b %Y") %></p>
+    </div>
+    <p><strong><%= operation.amount %>$ </strong></p>
+  </div>
+ </div>
+
+ <% end %>
+ <% end %>
+ <div class = "footer_container">
+ <div class ="footer">
+ <p class="forgot-pwd"><%= link_to 'Add New Transaction', new_category_operation_path %></p>
+ <p class="forgot-pwd"><%= link_to "Back", categories_path %></p>
+ </div>
+ </div>
 </div>
-
-<%= link_to "New operation", new_operation_path %>

@@ -1,0 +1,36 @@
+<div class="login-page">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="login-nav">
+      <div><%= link_to "Back", users_path, class: "rails-link" %> </div>
+      <div class="fs-5">LOGIN</div>     
+      <div class=" actions" >
+        <%= f.submit "Log in", class: "btn-login rails-link" %>
+      </div>
+    </div>
+
+    <div class="login-fields">
+    <div class="login-field">
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email-width" %>
+  </div>
+<hr>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "password-width" %>
+  </div>
+  </div>
+  
+  <% if devise_mapping.rememberable? %>
+    <div class="field forgot-pwd">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+  </div>
+  
+<% end %>
+</div>
+<div class="forgot-pwd">
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+<% end %>
+</div>

@@ -1,9 +1,13 @@
-<h1>New operation</h1>
-
-<%= render "form", operation: @operation %>
-
-<br>
 
 <div>
-  <%= link_to "Back to operations", operations_path %>
+<%= form_with(model: @operation, url:category_operations_path) do |form| %>
+     <p> New Transaction </p>
+  
+  <div class = "form-container">
+   <%= form.text_field :name, placeholder: " Name "%>
+   <%= form.text_field :amount, placeholder: " Price "%>
+   <%= form.submit "create", class: "submit-button" %>
+  </div>
+<% end %>
+<p><%= link_to "Back", category_operations_path %></p> 
 </div>
