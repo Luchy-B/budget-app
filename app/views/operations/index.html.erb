@@ -1,13 +1,11 @@
-
 <div class="login-nav">
-      <div><%= link_to "Home", categories_path, class: "rails-link" %> </div>
-      <div class="fs-5">TRANSACTION</div>  
-      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete %></div>    
+      <div><%= link_to "Back", categories_path, class: "rails-link" %> </div>
+      <div class="fs-5">TRANSACTIONS</div>  
+      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete, class: "btn-logout" %></div>    
   </div>
 
-
 <div>
-  <div class="category-header">
+  <div class="transaction-header">
     <h6><%= @category.name %></h6>
     <p><strong><%= @operations.sum(:amount) %>$ </strong></p>
   </div>
@@ -36,9 +34,6 @@
  <% end %>
  <% end %>
  <div class = "footer_container">
- <div class ="footer">
- <p class="forgot-pwd"><%= link_to 'Add New Transaction', new_category_operation_path %></p>
- <p class="forgot-pwd"><%= link_to "Back", categories_path %></p>
- </div>
+ <p class ="footer"><%= link_to 'Add New Transaction', new_category_operation_path %></p>
  </div>
 </div>

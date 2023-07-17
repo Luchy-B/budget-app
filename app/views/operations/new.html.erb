@@ -1,12 +1,21 @@
-<p class="login-nav new-t"> New Transaction </p>
-<div>
-<%= form_with(model: @operation, url:category_operations_path) do |form| %>
-     
+<div class="login-nav">
+  <div class="login-nav">NEW TRANSACTION</div>
+  <div class="cate-back">
+    <%= link_to "BACK", category_operations_path %>   
+  </div>     
+</div>
+
+<%= form_with(model: @operation, url:category_operations_path) do |form| %>     
   <div class = "form-container">
-   <%= form.text_field :name, placeholder: " Name "%>
-   <%= form.text_field :amount, placeholder: " Price "%>
-   <%= form.submit "create", class: "submit-button" %>
+    <div class="email-width cate-form">
+      <%= form.text_field :name, placeholder: " Name "%>
+    </div>
+    <div class="email-width cate-form">
+      <%= form.text_field :amount, placeholder: " Price "%>
+    </div>
+    <div class="email-width cate-form">
+      <%= form.submit "create", class: "submit-button" %>
+    </div>
   </div>
 <% end %>
-<p class="forgot-pwd"><%= link_to "Back", category_operations_path %></p> 
 </div>

@@ -2,8 +2,8 @@
 <div >
   <div class="login-nav">
       <div><%= link_to "Back", users_path, class: "rails-link" %> </div>
-      <div>Category</div>  
-      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete %></div>          
+      <div class="fs-5">CATEGORY</div>  
+      <div class="rails-link"><%= button_to "Log-out", destroy_user_session_path, method: :delete, class: "btn-logout" %></div>          
   </div>
 
   <% if @categories.empty? %>
@@ -31,9 +31,6 @@
   <% end %>
   
 </div>
-
-
-<div>
-<p class="forgot-pwd"><%= link_to "Add New category", new_category_path(@user) %></p>
+<div class = "footer_container">
+<p class ="footer"><%= link_to "Add New category", new_category_path(@user)%></p>
 </div>
-
